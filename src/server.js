@@ -21,10 +21,10 @@ fastify.get('/', function (request, reply) {
 
 fastify.get('/search', async function (request, reply) {
   try {
-    const { q } = request.query;
+    const { query } = request.query;
     const API_ID = process.env.API_ID;
     const API_KEY = process.env.API_KEY;
-    const url = `https://api.edamam.com/search?q=${encodeURIComponent(q)}&app_id=${API_ID}&app_key=${API_KEY}`;
+    const url = `https://api.edamam.com/search?q=${encodeURIComponent(query)}&app_id=${API_ID}&app_key=${API_KEY}`;
     const response = await fetch(url);
 
     if (!response.ok) {
