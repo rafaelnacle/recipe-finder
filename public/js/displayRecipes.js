@@ -25,6 +25,14 @@ async function displayRecipes() {
   function renderRecipes(recipes) {
     recipeContainer.innerHTML = '';
 
+    if (recipes.length === 0) {
+      const messageElement = document.createElement('p');
+      messageElement.classList.add('text-center', 'text-gray-500', 'mt-4');
+      messageElement.textContent = 'No recipes found.';
+      recipeContainer.appendChild(messageElement);
+      return;
+    }
+
     recipes.forEach(recipe => {
       const recipeElement = document.createElement('div');
       recipeElement.classList.add('recipe', 'bg-indigo-100', 'text-black', 'p-4', 'mb-4', 'rounded', 'shadow-md');
