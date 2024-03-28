@@ -3,12 +3,22 @@ This is a project I did to finish the javascript course from [Boot.dev](https://
 
 So I decided to keep it a little simpler and make a recipe finder.
 
-![image](https://github.com/rafaelnacle/recipe-finder/assets/54647722/a2d2f61d-b4f7-4549-a739-8ace79c12183)
+![image](https://github.com/rafaelnacle/recipe-finder/assets/54647722/a3255af7-74f7-4acd-a771-78e0a125f48e)
 
 ### How to start
 **Clone the repository**
+```bash
+ git clone https://github.com/rafaelnacle/recipe-finder.git
+```
 **Install the dependencies**
+```bash
+  npm install
+```
 **Run the project**
+I've used the native .env since you don't need to install dotenv anymore, I've did a script for easily running it. You'll still have to create a .env using your API-ID and KEY
+```bash
+  npm run dev
+```
  
 
 ### What I've used
